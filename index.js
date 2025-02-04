@@ -32,9 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleGuess(event) {
     const selectedColor = event.target.style.backgroundColor;
   
-    // Reset animation class to ensure it triggers every time
     gameStatus.classList.remove('animate');
-    void gameStatus.offsetWidth; // Trigger reflow to reset the animation
+    void gameStatus.offsetWidth; 
     gameStatus.classList.add('animate');
   
     if (selectedColor === targetColor) {
